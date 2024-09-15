@@ -28,7 +28,7 @@ export default function Header() {
         </div>
       </div>
       <div className="user">
-        <button className="w-32 h-10 rounded-lg bg-secondary mr-3">Login In</button>
+        <button className="w-32 h-10 rounded-lg bg-secondary mr-3">Login</button>
         <button className="w-32 h-10 rounded-lg bg-primary">Sign Up</button>
       </div>
     </div>

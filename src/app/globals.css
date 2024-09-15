@@ -32,6 +32,14 @@
   .main-grid {
     grid-area: main;
   }
+
+  .side-heading {
+    font-size: 1.875rem ;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
 }
 
 input[type="search"]::-webkit-search-decoration,
