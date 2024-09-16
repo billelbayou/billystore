@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
+import { WishlistProvider } from "@/context/WishlistProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +20,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} body-grid bg-custom-gradient text-textColor`}>
-        <header className="header-grid h-full w-full"><Header /></header>
-        <nav className="nav-grid"><Sidebar /></nav>
-        <main className="main-grid">{children}</main>
+      <body
+        className={`${inter.className} body-grid bg-custom-gradient text-textColor`}
+      >
+        <header className="header-grid h-full w-full">
+          <Header />
+        </header>
+        <nav className="nav-grid">
+          <Sidebar />
+        </nav>
+        <main className="main-grid">
+          <WishlistProvider>{children}</WishlistProvider>
+        </main>
+        <footer className="footer-grid">
+          <Footer />
+        </footer>
       </body>
     </html>
   );

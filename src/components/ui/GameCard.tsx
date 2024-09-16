@@ -1,6 +1,7 @@
 import { FiShoppingCart } from "react-icons/fi";
 import { Game } from "../../../public/Games";
 import Image from "next/image";
+import WishlistButton from "@/components/ui/WishlistButton";
 
 export default function GameCard({ game }: { game: Game }) {
   return (
@@ -13,8 +14,11 @@ export default function GameCard({ game }: { game: Game }) {
             <p>Price</p>
             <h3 className="text-white text-xl">{game.price}</h3>
           </div>
-          <div className="bg-primary w-fit h-fit p-2 rounded-lg">
-            <FiShoppingCart size={25} />
+          <div className="flex items-center">
+            <div className="bg-primary w-fit h-fit p-2 rounded-lg">
+              <FiShoppingCart size={25} />
+            </div>
+            <WishlistButton game={game} />
           </div>
         </div>
       </div>

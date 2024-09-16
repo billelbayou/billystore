@@ -1,10 +1,34 @@
 import Image from "next/image";
 import logo from "../../public/jeu.png";
 import { CgHomeAlt } from "react-icons/cg";
-import Link from "next/link";
 import { BiCategory } from "react-icons/bi";
 import { GoHeart } from "react-icons/go";
 import { HiMiniInformationCircle } from "react-icons/hi2";
+import SidebarLinkButton from "./ui/SidebarLinkButton";
+import { LinkButton } from "./ui/SidebarLinkButton";
+
+const sidebarNav: LinkButton[] = [
+  {
+    title: "Home",
+    href: "/",
+    icon: <CgHomeAlt size={24} />
+  },
+  {
+    title: "Category",
+    href: "/category",
+    icon: <BiCategory size={24} />
+  },
+  {
+    title: "Wishlist",
+    href: "/wishlist",
+    icon: <GoHeart size={24} />
+  },
+  {
+    title: "About",
+    href: "/about",
+    icon: <HiMiniInformationCircle size={24} />
+  }
+]
 
 export default function Navbar() {
   return (
@@ -17,33 +41,11 @@ export default function Navbar() {
           </figcaption>
         </figure>
         <ul className="mt-10">
-          <li className="mb-6">
-            <Link
-              href={"#"}
-              className="flex items-center w-full h-full text-primary"
-            >
-              <CgHomeAlt size={24} />
-              <p className="ml-3">Home</p>
-            </Link>
-          </li>
-          <li className="mb-6">
-            <Link href={"#"} className="flex items-center w-full h-full">
-              <BiCategory size={24} />
-              <p className="ml-3">Category</p>
-            </Link>
-          </li>
-          <li className="mb-6">
-            <Link href={"#"} className="flex items-center w-full h-full">
-              <GoHeart size={24} />
-              <p className="ml-3">Wishlist</p>
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"} className="flex items-center w-full h-full">
-              <HiMiniInformationCircle size={24} />
-              <p className="ml-3">About</p>
-            </Link>
-          </li>
+          {sidebarNav.map(element => (
+            <li key={element.title} className="mb-6">
+              <SidebarLinkButton LinkButton={element} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

@@ -18,8 +18,8 @@
   .body-grid {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "nav header" "nav main";
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "nav header" "nav main" "footer footer";
   }
 
   .header-grid {
@@ -33,8 +33,12 @@
     grid-area: main;
   }
 
+  .footer-grid {
+    grid-area: footer;
+  }
+
   .side-heading {
-    font-size: 1.875rem ;
+    font-size: 1.875rem;
     font-weight: 600;
     margin-top: 2.5rem;
     margin-bottom: 0.5rem;

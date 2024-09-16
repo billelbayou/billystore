@@ -14,9 +14,22 @@ import hitman3 from "./Games/Hitman 3.png";
 import nba2k from "./Games/NBA2K.png";
 import nomanssky from "./Games/No Man's Sky.png";
 import rust from "./Games/Rust.png";
+import dishonored2 from "./Games/Dishonored 2.jpg";
+import assettoCorsa from "./Games/Assetto Corsa.jpg";
 import { StaticImageData } from "next/image";
 
+export const gameCategories: string[] = [
+  "Action-Adventure",
+  "Action RPG",
+  "Racing",
+  "Survival",
+  "First-Person Shooter",
+  "Sports",
+  "Stealth",
+];
+
 export type Game = {
+  id: number;
   title: string;
   Image: StaticImageData;
   price: number;
@@ -27,6 +40,7 @@ export type Game = {
 
 const Games: Game[] = [
   {
+    id: 1,
     title: "Grand Theft Auto V",
     Image: GrandTheftAutoV,
     price: 14.99,
@@ -35,6 +49,7 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 2,
     title: "Red Dead Redemption 2",
     Image: RedDeadRedemption2,
     price: 59.99,
@@ -43,14 +58,16 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 3,
     title: "Elden Ring",
     Image: EldenRing,
     price: 59.99,
     category: "Action RPG",
     bestSellers: true,
-    newGames: false,
+    newGames: true,
   },
   {
+    id: 4,
     title: "Forza Horizon 5",
     Image: ForzaHorizon5,
     price: 29.99,
@@ -59,6 +76,7 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 5,
     title: "The Witcher 3: Wild Hunt",
     Image: TheWitcher3,
     price: 39.99,
@@ -67,6 +85,7 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 6,
     title: "ARK: Survival Evolved",
     Image: ARK,
     price: 14.99,
@@ -75,14 +94,16 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 7,
     title: "Battlefield 2042",
     Image: Battlefield2042,
     price: 59.99,
     category: "First-Person Shooter",
     bestSellers: false,
-    newGames: false,
+    newGames: true,
   },
   {
+    id: 8,
     title: "Black Myth: Wukong",
     Image: blackmythwukong,
     price: 59.99,
@@ -91,14 +112,16 @@ const Games: Game[] = [
     newGames: true,
   },
   {
+    id: 9,
     title: "Call of Duty: Modern Warfare III",
     Image: codmw3,
     price: 69.99,
     category: "First-Person Shooter",
-    bestSellers: false,
+    bestSellers: true,
     newGames: true,
   },
   {
+    id: 10,
     title: "Cyberpunk 2077",
     Image: cyberpunk2077,
     price: 59.99,
@@ -107,6 +130,7 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 11,
     title: "EA Sports FC 24",
     Image: fc24,
     price: 69.99,
@@ -115,6 +139,7 @@ const Games: Game[] = [
     newGames: true,
   },
   {
+    id: 12,
     title: "God of War",
     Image: godofwar,
     price: 19.99,
@@ -123,6 +148,7 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 13,
     title: "Hitman 3",
     Image: hitman3,
     price: 5.79,
@@ -131,6 +157,7 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 14,
     title: "NBA 2K24",
     Image: nba2k,
     price: 59.99,
@@ -139,6 +166,7 @@ const Games: Game[] = [
     newGames: true,
   },
   {
+    id: 15,
     title: "No Man's Sky",
     Image: nomanssky,
     price: 23.99,
@@ -147,11 +175,30 @@ const Games: Game[] = [
     newGames: false,
   },
   {
+    id: 16,
     title: "Rust",
     Image: rust,
     price: 39.99,
     category: "Survival",
     bestSellers: false,
+    newGames: false,
+  },
+  {
+    id: 17,
+    title: "Dishonored 2",
+    Image: dishonored2,
+    price: 19.99,
+    category: "Stealth",
+    bestSellers: true,
+    newGames: false,
+  },
+  {
+    id: 18,
+    title: "Assetto Corsa",
+    Image: assettoCorsa,
+    price: 29.99,
+    category: "Racing",
+    bestSellers: true,
     newGames: false,
   },
 ];

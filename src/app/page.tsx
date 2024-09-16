@@ -8,7 +8,7 @@ import BuyButton from "@/components/ui/BuyButton";
 
 export default function Home() {
   const rdr2 = Games[1];
-  
+
   return (
     <div className="p-4 h-full w-full">
       <div className="rounded-xl relative w-fit h-fit">
@@ -40,11 +40,11 @@ export default function Home() {
       </div>
       <div>
         <h2 className="side-heading">Best Sellers</h2>
-        <GamesGrid gamesArray={BestGames}/>
+        <GamesGrid gamesArray={BestGames} />
       </div>
       <div>
         <h2 className="side-heading">New Games</h2>
-        <GamesGrid gamesArray={NewGames}/>
+        <GamesGrid gamesArray={NewGames} />
       </div>
     </div>
   );
