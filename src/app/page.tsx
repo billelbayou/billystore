@@ -5,6 +5,7 @@ import Carousel from "@/components/ui/Carousel";
 import Games, { BestGames, NewGames } from "../../public/Games";
 import GamesGrid from "@/components/ui/GamesGrid";
 import BuyButton from "@/components/ui/BuyButton";
+import Link from "next/link";
 
 export default function Home() {
   const rdr2 = Games[1];
@@ -12,11 +13,13 @@ export default function Home() {
   return (
     <div className="p-4 h-full w-full">
       <div className="rounded-xl relative w-fit h-fit">
-        <Image
-          src={rdr2Wide}
-          alt="Red Dead Redemtption 2"
-          className="rounded-xl"
-        />
+        <Link href={`/games/${rdr2.id}`}>
+          <Image
+            src={rdr2Wide}
+            alt="Red Dead Redemtption 2"
+            className="rounded-xl"
+          />
+        </Link>
         <div className="absolute bottom-0 text-white flex justify-between w-full p-8 items-end">
           <div className="w-96">
             <h2 className="text-2xl font-bold mb-5">{rdr2.title}</h2>

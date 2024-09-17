@@ -2,10 +2,10 @@
 
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { Game } from "../../../public/Games";
-import { useWishlist } from "@/context/WishlistProvider";
+import { UseContext } from "@/context/context";
 
 export default function WishlistButton({ game }: { game: Game }) {
-  const { wishlist, toggleWishlist } = useWishlist();
+  const { wishlist, toggleWishlist } = UseContext();
   const isInWishlist = wishlist.some((item) => item.id === game.id);
 
   return (

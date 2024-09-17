@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
@@ -23,12 +24,17 @@ export default function Header() {
         <div className="flex justify-center items-center bg-secondary rounded-full h-12 w-12 mr-3">
           <MdNotificationsNone size={24} color="white" />
         </div>
-        <div className="flex justify-center items-center bg-secondary rounded-full h-12 w-12">
+        <Link
+          href={"/cart"}
+          className="flex justify-center items-center bg-secondary rounded-full h-12 w-12"
+        >
           <FiShoppingCart size={20} color="white" />
-        </div>
+        </Link>
       </div>
       <div className="user">
-        <button className="w-32 h-10 rounded-lg bg-secondary mr-3">Login</button>
+        <button className="w-32 h-10 rounded-lg bg-secondary mr-3">
+          Login
+        </button>
         <button className="w-32 h-10 rounded-lg bg-primary">Sign Up</button>
       </div>
     </div>

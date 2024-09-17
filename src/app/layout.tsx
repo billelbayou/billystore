@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
-import { WishlistProvider } from "@/context/WishlistProvider";
+import { ContextProvider } from "@/context/context";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,7 +30,7 @@ export default function RootLayout({
           <Sidebar />
         </nav>
         <main className="main-grid">
-          <WishlistProvider>{children}</WishlistProvider>
+          <ContextProvider>{children}</ContextProvider>
         </main>
         <footer className="footer-grid">
           <Footer />
