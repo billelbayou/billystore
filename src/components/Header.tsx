@@ -2,8 +2,12 @@ import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
+import SignIn from "./auth/signin-button";
+import { auth } from "@/auth";
+import UserAvatar from "./auth/UserAvatar";
 
-export default function Header() {
+export default async function Header() {
+  const session = await auth();
   return (
     <div className="h-20 p-4 flex items-center">
       <form action="" className="h-full w-fit relative">
@@ -31,12 +35,7 @@ export default function Header() {
           <FiShoppingCart size={20} color="white" />
         </Link>
       </div>
-      <div className="user">
-        <button className="w-32 h-10 rounded-lg bg-secondary mr-3">
-          Login
-        </button>
-        <button className="w-32 h-10 rounded-lg bg-primary">Sign Up</button>
-      </div>
+      <div className="user">{session ? <UserAvatar /> : <SignIn />}</div>
     </div>
   );
 }
