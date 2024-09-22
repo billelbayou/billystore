@@ -1,16 +1,9 @@
-import { signIn } from "@/auth";
+import Link from "next/link";
 
 export default function SignIn() {
   return (
-    <form
-      action={async () => {
-        "use server";
-        await signIn("google");
-      }}
-    >
-      <button type="submit" className="w-32 h-10 rounded-lg bg-primary">
-        Sign In
-      </button>
-    </form>
+    <Link href={"/login"} className="w-32 h-10 rounded-lg flex justify-center items-center bg-primary">
+      Sign In
+    </Link>
   );
 }
