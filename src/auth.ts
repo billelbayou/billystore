@@ -1,23 +1,25 @@
-import NextAuth from "next-auth";
-import google from "next-auth/providers/google";
-import type { Provider } from "next-auth/providers";
+// /* eslint-disable @typescript-eslint/no-explicit-any */
+// import NextAuth from "next-auth";
+// import Credentials from "next-auth/providers/credentials";
+// import { compare } from "bcrypt-ts";
+// import { getUser } from "@/database/db";
+// import { authConfig } from "./auth.config";
 
-const providers: Provider[] = [google];
-
-export const providerMap = providers
-  .map((provider) => {
-    if (typeof provider === "function") {
-      const providerData = provider();
-      return { id: providerData.id, name: providerData.name };
-    } else {
-      return { id: provider.id, name: provider.name };
-    }
-  })
-  .filter((provider) => provider.id !== "credentials");
-
-export const { handlers, auth, signIn, signOut } = NextAuth({
-  providers,
-  pages: {
-    signIn: "/signin",
-  },
-});
+// export const {
+//   handlers: { GET, POST },
+//   auth,
+//   signIn,
+//   signOut,
+// } = NextAuth({
+//   ...authConfig,
+//   providers: [
+//     Credentials({
+//       async authorize({ email, password }: any) {
+//         const user = await getUser(email);
+//         if (user.length === 0) return null;
+//         const passwordsMatch = await compare(password, user[0].password!);
+//         if (passwordsMatch) return user[0] as any;
+//       },
+//     }),
+//   ],
+// });

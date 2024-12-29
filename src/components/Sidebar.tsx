@@ -6,8 +6,8 @@ import { GoHeart } from "react-icons/go";
 import { HiMiniInformationCircle } from "react-icons/hi2";
 import SidebarLinkButton from "./ui/SidebarLinkButton";
 import { LinkButton } from "./ui/SidebarLinkButton";
-import SignOut from "./auth/signout-button";
-import { auth } from "@/auth";
+// import SignOut from "./auth/signout-button";
+// import { auth } from "@/auth";
 
 const sidebarNav: LinkButton[] = [
   {
@@ -33,7 +33,7 @@ const sidebarNav: LinkButton[] = [
 ]
 
 export default async function Navbar() {
-  const session = await auth()
+  // const session = await auth()
   return (
     <div className="h-screen w-64 px-5 pb-2">
       <div className="fixed">
@@ -50,7 +50,7 @@ export default async function Navbar() {
             </li>
           ))}
         </ul>
-        {session ? <SignOut /> : <></>}
+        {/* {session ? <SignOut /> : <></>} */}
       </div>
     </div>
   );

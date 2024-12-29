@@ -1,7 +1,7 @@
 import Image from "next/image";
 import rdr2Wide from "../../public/rdr2.jpg";
 import { GoHeart } from "react-icons/go";
-import Carousel from "@/components/ui/Carousel";
+// import Carousel from "@/components/ui/Carousel";
 import Games, { BestGames, NewGames } from "../../public/Games";
 import GamesGrid from "@/components/ui/GamesGrid";
 import BuyButton from "@/components/ui/BuyButton";
@@ -39,7 +39,7 @@ export default function Home() {
       </div>
       <div>
         <h2 className="side-heading">Actual Games</h2>
-        <Carousel imagesUrl={Games.map((game) => game.Image)} />
+        {/* <Carousel imagesUrl={Games.map((game) => game.Image)} /> */}
       </div>
       <div>
         <h2 className="side-heading">Best Sellers</h2>
